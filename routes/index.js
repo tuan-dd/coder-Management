@@ -5,13 +5,17 @@ const router = express.Router();
 
 /* GET home page. */
 
-router.get('/example/:err', function (req, res, next) {
+router.get('/', function (req, res, next) {
    const { err } = req.params;
    try {
       if (err === 'err') {
          throw new AppError(404, 'success ERROR', 'Welcome');
       }
-      return sendResponse(res, 200, 'oke', null, null, 'test success');
+      return sendResponse({
+         res,
+         data: 'oke',
+         message: 'Welcome to Coder Management',
+      });
    } catch (error) {
       next(error);
    }
