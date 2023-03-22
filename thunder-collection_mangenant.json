@@ -1,0 +1,335 @@
+{
+   "client": "Thunder Client",
+   "collectionName": "mangenant",
+   "dateExported": "2023-03-22T17:01:13.182Z",
+   "version": "1.1",
+   "folders": [
+      {
+         "_id": "99432e69-2a52-4b67-bd2d-fe89a6d45469",
+         "name": "user",
+         "containerId": "",
+         "created": "2023-03-18T03:59:57.435Z",
+         "sortNum": 10000
+      },
+      {
+         "_id": "21b0e0b6-bfb9-4ab1-93a6-272df0e6427e",
+         "name": "login/update",
+         "containerId": "",
+         "created": "2023-03-18T04:01:43.979Z",
+         "sortNum": 20000
+      },
+      {
+         "_id": "bf62cec1-d4cf-4b0d-b0cf-80bbf04b9e88",
+         "name": "task",
+         "containerId": "",
+         "created": "2023-03-18T16:16:02.569Z",
+         "sortNum": 30000
+      }
+   ],
+   "requests": [
+      {
+         "_id": "9d0b8273-a114-4fbc-95a4-1f231c9c9df4",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "99432e69-2a52-4b67-bd2d-fe89a6d45469",
+         "name": "create user",
+         "url": "http://localhost:5000/user",
+         "method": "POST",
+         "sortNum": 10000,
+         "created": "2023-03-18T03:59:40.505Z",
+         "modified": "2023-03-22T10:52:06.197Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"Phuong Anh\",\n  \"email\": \"tuanthap@gmail.com\",\n  \"password\": \"tuan123\",\n  \"position\" : \"Junior\",\n  \"levelOn\": \"hu.Anh@gmail.com\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "11bcf5f9-6483-4f7d-9bd1-6c0f33fa11e2",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "21b0e0b6-bfb9-4ab1-93a6-272df0e6427e",
+         "name": "login",
+         "url": "http://localhost:5000/auth/login",
+         "method": "POST",
+         "sortNum": 20000,
+         "created": "2023-03-18T04:01:52.082Z",
+         "modified": "2023-03-22T11:00:03.203Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"email\":\"hung@gmail.com\",\n  \"password\": \"tuan123\"\n}",
+            "form": []
+         },
+         "tests": []
+      },
+      {
+         "_id": "d702ff0b-dbfa-49a7-9255-4b71caae3fb7",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "21b0e0b6-bfb9-4ab1-93a6-272df0e6427e",
+         "name": "updateInfo",
+         "url": "http://localhost:5000/auth/me",
+         "method": "PUT",
+         "sortNum": 30000,
+         "created": "2023-03-18T04:02:42.633Z",
+         "modified": "2023-03-22T08:44:13.297Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n\"password\" : \"tuan124\",\n\"newPassword\": \"tuan123\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "5f0bfac4-5e05-4179-b447-cf588b770c65",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "bf62cec1-d4cf-4b0d-b0cf-80bbf04b9e88",
+         "name": "createTask",
+         "url": "http://localhost:5000/task",
+         "method": "POST",
+         "sortNum": 70000,
+         "created": "2023-03-18T16:16:20.889Z",
+         "modified": "2023-03-22T13:14:43.300Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"task\": \"sua cau tang\",\n  \"appointedUser\": \"hu.Anh@gmail.com\",\n \"description\": \"sua cau tang\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "16f8b7a2-f1df-4713-b3f7-e8eb9b56f551",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "bf62cec1-d4cf-4b0d-b0cf-80bbf04b9e88",
+         "name": "appoinTask",
+         "url": "http://localhost:5000/task/6415286098b5fbd5823d27df",
+         "method": "PUT",
+         "sortNum": 80000,
+         "created": "2023-03-19T06:38:07.248Z",
+         "modified": "2023-03-22T10:39:48.307Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"task\": \"ba ma hehe\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "79ea0c1d-9c93-4ccc-a11a-bcdb0f8b7733",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "bf62cec1-d4cf-4b0d-b0cf-80bbf04b9e88",
+         "name": "update status",
+         "url": "http://localhost:5000/task/status/641b008562fc3a988a04672f",
+         "method": "PUT",
+         "sortNum": 90000,
+         "created": "2023-03-19T06:38:09.808Z",
+         "modified": "2023-03-22T16:16:19.078Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"status\": \"done\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "ffc8033f-bf5a-4f77-b69c-5a429765bc92",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "99432e69-2a52-4b67-bd2d-fe89a6d45469",
+         "name": "update progress",
+         "url": "http://localhost:5000/user/progress/me",
+         "method": "PUT",
+         "sortNum": 90000,
+         "created": "2023-03-19T16:37:23.808Z",
+         "modified": "2023-03-22T11:03:31.923Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"task\" :\"sua nuoc\",\n  \"progress\": 100\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "6a2aae45-899d-4af3-872a-dc65b77f322d",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "99432e69-2a52-4b67-bd2d-fe89a6d45469",
+         "name": "update",
+         "url": "http://localhost:5000/user/641addd60c27fd1df116c13c",
+         "method": "PUT",
+         "sortNum": 95000,
+         "created": "2023-03-20T16:29:45.938Z",
+         "modified": "2023-03-22T12:00:37.457Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n \"position\":\"Junior\",\n\"emailLevelOn\":\"hu.Anh@gmail.com\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "f89c69eb-514f-483b-8cec-4911d9db03fe",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "99432e69-2a52-4b67-bd2d-fe89a6d45469",
+         "name": "get user id",
+         "url": "http://localhost:5000/user/6415369c0a69023d563a5461",
+         "method": "GET",
+         "sortNum": 100000,
+         "created": "2023-03-19T19:23:07.200Z",
+         "modified": "2023-03-22T12:37:36.835Z",
+         "headers": [],
+         "params": [],
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "6b541b3e-7575-4807-b1a7-b4d0195c02f4",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "bf62cec1-d4cf-4b0d-b0cf-80bbf04b9e88",
+         "name": "get state",
+         "url": "http://localhost:5000/task",
+         "method": "GET",
+         "sortNum": 100000,
+         "created": "2023-03-21T18:52:38.401Z",
+         "modified": "2023-03-22T16:18:20.865Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"status\":\"working\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      },
+      {
+         "_id": "ca8a49ec-5890-4b51-b7ca-37b61cde2d43",
+         "colId": "9f3bd99f-95e5-4330-ad0b-7f86c4fa55b2",
+         "containerId": "99432e69-2a52-4b67-bd2d-fe89a6d45469",
+         "name": "get user",
+         "url": "http://localhost:5000/user/6415281598b5fbd5823d27dc",
+         "method": "GET",
+         "sortNum": 110000,
+         "created": "2023-03-19T19:23:15.590Z",
+         "modified": "2023-03-22T12:23:34.478Z",
+         "headers": [],
+         "params": [],
+         "body": {
+            "type": "json",
+            "raw": "{\n  \"createdAt\":\"2023-03-17\"\n}",
+            "form": []
+         },
+         "auth": {
+            "type": "oauth2",
+            "oauth2": {
+               "grantType": "authorization_code",
+               "tokenUrl": "",
+               "clientId": "",
+               "clientSecret": "",
+               "clientAuth": "in-header"
+            }
+         },
+         "tests": []
+      }
+   ]
+}
